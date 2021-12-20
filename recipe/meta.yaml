@@ -1,5 +1,5 @@
 {% set name = "edgetest-conda" %}
-{% set version = "2021.12.0" %}
+{% set version = "2021.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 35dbfd259f9de56f9e4d9287fad09c22633a5e70992fa6533455e3fb124182cf
+  sha256: 0c94da1674f9ca56f8abc57fd9cee810da888aa0c34c087f6003a8316dde69fe
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install -vv --no-deps ."
+  script: {{ PYTHON }} -m pip install -vv --no-deps .
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'edgetest-conda is a conda plugin for edgetest'
+  summary: edgetest-conda is a conda plugin for edgetest
   description: |
     This plugin allows users to create virtual environments using conda instead of venv when using edgetest
   doc_url: https://capitalone.github.io/edgetest-conda
