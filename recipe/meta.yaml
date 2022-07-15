@@ -1,5 +1,5 @@
 {% set name = "edgetest-conda" %}
-{% set version = "2022.4.1" %}
+{% set version = "2022.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a03daadc5455c8aaeef2bd53665cfc1a4a7f1a8e4a1e1b8f1890a13e31806fdd
+  sha256: 78f3881fe07a08a476185128e6b590b7d40d3692a9a1940a7d6833872a162c70
 
 build:
   noarch: python
