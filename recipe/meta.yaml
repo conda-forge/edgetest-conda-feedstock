@@ -1,5 +1,5 @@
 {% set name = "edgetest-conda" %}
-{% set version = "2023.4.0" %}
+{% set version = "2023.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d2fb6db751c568fef98c2f28688355d57c9311da974219521f6d6747f99bdd4a
+  sha256: 04d2adbc32e24ffb02ec4537e504ea84083e970de2317c212059cc910dc5ce9a
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
     - edgetest >=2021.12.3
     - conda
-    - python >=3.7
+    - python >=3.8
 
 test:
   imports:
