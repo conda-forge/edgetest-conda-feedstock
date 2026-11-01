@@ -1,13 +1,13 @@
 {% set name = "edgetest-conda" %}
-{% set version = "2026.1.0" %}
+{% set version = "2026.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5bfa967668ac3fe600ae05ad18ab07775d372e53ab956b99fcf6360570a9e4a0
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: df6123032579d99ffcc7440abef73c6db5f00d6dc1dc4642c8a224f5263bae53
 
 build:
   noarch: python
